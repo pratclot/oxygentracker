@@ -1,4 +1,4 @@
-package com.example.oxygentracker.ui
+package com.pratclot.oxygentracker.ui
 
 import androidx.compose.ui.graphics.Color
 
