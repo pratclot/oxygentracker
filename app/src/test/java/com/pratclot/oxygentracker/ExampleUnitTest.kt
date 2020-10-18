@@ -1,4 +1,4 @@
-package com.example.oxygentracker
+package com.pratclot.oxygentracker
 
 import org.junit.Test
 

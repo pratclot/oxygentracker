@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Oxygen Tracker</string>
+    <string name="oxygenActivityPutSpo2ToastFailure">Baldao!</string>
+    <string name="oxygenActivityPutSpo2ToastSuccess">Triunfo!</string>
+    <string name="oxygenActivityPutSpo2ButtonText">Adicionar</string>
+    <string name="oxygenActivityPutSpo2Label">Nivel de SpO2</string>
+    <string name="oxygenActivityPutSpo2InputText">Adicionar medicao</string>
+</resources>

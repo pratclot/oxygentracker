@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Oxygen Tracker</string>
+    <string name="oxygenActivityPutSpo2InputText">Add measurement</string>
+    <string name="oxygenActivityPutSpo2Label">SpO2 level</string>
+    <string name="oxygenActivityPutSpo2ToastSuccess">Success!</string>
+    <string name="oxygenActivityPutSpo2ToastFailure">Failed!</string>
+    <string name="oxygenActivityPutSpo2ButtonText">Add</string>
 </resources>
