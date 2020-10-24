@@ -15,7 +15,7 @@ class OxygenActivityViewModel @ViewModelInject constructor(
     val dao: BodyMeasurementsDao
 ) : ViewModel() {
     val oxygenMeasurements: LiveData<List<BodyMeasurement.OxygenMeasurement>>
-        get() = dao.getAll().asLiveData()
+        get() = getAll().asLiveData()
 
     suspend fun addMeasurement(value: String) = withContext(Dispatchers.IO) {
         dao.insert(BodyMeasurement.OxygenMeasurement.from(value))
