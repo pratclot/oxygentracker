@@ -6,13 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.compose.foundation.Icon
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.material.*
+import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -22,7 +24,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ContextAmbient
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
@@ -35,7 +36,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 
 @AndroidEntryPoint
-class AddFragment : Fragment() {
+class FragmentAdd : Fragment() {
     private val viewModel: OxygenActivityViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -101,30 +102,7 @@ private fun SetContent(viewModel: OxygenActivityViewModel, navController: NavCon
                     }
                 }
             },
-            bottomBar = {
-                BottomNavigation() {
-                    BottomNavigationItem(
-                        icon = {
-                            Icon(vectorResource(id = R.drawable.ic_baseline_add_24))
-                        }, selected = true, onClick = {
-                            showFragment(
-                                navController,
-                                R.id.action_global_addFragment
-                            )
-                        }
-                    )
-                    BottomNavigationItem(
-                        icon = {
-                            Icon(vectorResource(id = R.drawable.ic_baseline_list_24))
-                        }, selected = false, onClick = {
-                            showFragment(
-                                navController,
-                                R.id.action_global_listFragment
-                            )
-                        }
-                    )
-                }
-            }
+            bottomBar = { setupBottomBar(navController) },
         )
     }
 }

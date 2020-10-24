@@ -7,7 +7,6 @@ import androidx.lifecycle.asLiveData
 import com.pratclot.oxygentracker.data.BodyMeasurement
 import com.pratclot.oxygentracker.db.BodyMeasurementsDao
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.withContext
 import javax.inject.Singleton
 
@@ -22,5 +21,5 @@ class OxygenActivityViewModel @ViewModelInject constructor(
         dao.insert(BodyMeasurement.OxygenMeasurement.from(value))
     }
 
-    suspend fun getAll() = withContext(Dispatchers.IO) { dao.getAll().distinctUntilChanged() }
+    fun getAll() = dao.getAll()
 }
