@@ -6,16 +6,23 @@
 
     <fragment
         android:id="@+id/addFragment"
-        android:name="com.pratclot.oxygentracker.fragments.AddFragment"
+        android:name="com.pratclot.oxygentracker.fragments.FragmentAdd"
         android:label="AddFragment" />
     <action
         android:id="@+id/action_global_addFragment"
         app:destination="@id/addFragment" />
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.pratclot.oxygentracker.fragments.ListFragment"
+        android:name="com.pratclot.oxygentracker.fragments.FragmentList"
         android:label="ListFragment" />
     <action
         android:id="@+id/action_global_listFragment"
         app:destination="@id/listFragment" />
+    <fragment
+        android:id="@+id/fragmentChart"
+        android:name="com.pratclot.oxygentracker.fragments.FragmentChart"
+        android:label="FragmentChart" />
+    <action
+        android:id="@+id/action_global_fragmentChart"
+        app:destination="@id/fragmentChart" />
 </navigation>
